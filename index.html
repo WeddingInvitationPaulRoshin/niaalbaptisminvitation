@@ -1,1 +1,459 @@
-a
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>Niaal Jacob Mukul | Baptism Invitation · Aug 8, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --sky:#1b90b6;--babyblue:#a9dbe8;--pale:#e6f6fa;--cream:#f7fcfd;
+  --deep:#0f6382;--soft:#5cb4cc;--text:#0c4a60;--pearl:#eef9fc;--silver:#c5e6ee;
+  --glow:#7fd0e3;
+}
+html{scroll-behavior:smooth}
+body{font-family:"Lato",sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;-webkit-text-size-adjust:100%}
+
+/* SCROLL BUTTON */
+#scrollBtn{
+  position:fixed;bottom:1.2rem;right:1.2rem;z-index:800;
+  width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,var(--sky),var(--soft));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;color:#fff;
+  box-shadow:0 6px 22px rgba(106,169,224,0.55);
+  cursor:pointer;border:none;opacity:0;
+  transition:opacity 0.5s,transform 0.2s;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;
+}
+#scrollBtn.show{opacity:1;animation:bounce 2s ease-in-out infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+#scrollBtn:active{transform:scale(0.92)}
+
+/* ===== CURTAIN ===== */
+#cs{position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+.cp{position:absolute;top:0;height:100%;width:50%;transition:transform 1.6s cubic-bezier(0.86,0,0.07,1);pointer-events:none}
+.cp.l{left:0;transform-origin:left center}
+.cp.r{right:0;transform-origin:right center}
+.cp svg{width:100%;height:100%;display:block}
+#cs.open .cp.l{transform:translateX(-102%)}
+#cs.open .cp.r{transform:translateX(102%)}
+.cc{position:relative;z-index:5;text-align:center;padding:1.5rem 2rem;pointer-events:none}
+.cc-cross{font-size:3rem;margin-bottom:0.5rem;animation:cpx 2.6s infinite;filter:drop-shadow(0 0 10px rgba(167,211,245,.9))}
+@keyframes cpx{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.75;transform:scale(1.08)}}
+.cc-names{font-family:"Great Vibes",cursive;font-size:clamp(3.2rem,10vw,6rem);color:#fff;line-height:1.1;margin-bottom:.4rem;text-shadow:0 2px 20px rgba(61,111,158,.55),0 0 40px rgba(167,211,245,.6)}
+.cc-sub{font-family:"Cormorant Garamond",serif;font-size:.95rem;letter-spacing:.42em;color:var(--pearl);text-transform:uppercase;margin-bottom:1.8rem;opacity:.95}
+.cc-tag{display:inline-flex;align-items:center;gap:.6rem;border:1.5px solid rgba(255,255,255,.75);padding:.62rem 1.9rem;border-radius:2rem;font-family:"Cormorant Garamond",serif;font-size:.82rem;letter-spacing:.22em;color:#fff;text-transform:uppercase;animation:cfl 3s ease-in-out infinite;background:rgba(255,255,255,.12);backdrop-filter:blur(4px)}
+@keyframes cfl{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.cc-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:.28em;color:var(--pearl);text-transform:uppercase;animation:cbl 2.2s infinite;white-space:nowrap;pointer-events:none}
+@keyframes cbl{0%,100%{opacity:.95}50%{opacity:.25}}
+/* twinkle stars on the curtain */
+#cstars{position:absolute;inset:0;z-index:2;pointer-events:none}
+.tw{position:absolute;background:#fff;border-radius:50%;opacity:0;animation:twk linear infinite;box-shadow:0 0 6px rgba(255,255,255,.9)}
+@keyframes twk{0%,100%{opacity:0;transform:scale(.4)}50%{opacity:1;transform:scale(1)}}
+
+/* ===== MAIN ===== */
+#mp{display:none}
+#mp.show{display:block;animation:pIn 1s ease forwards}
+@keyframes pIn{from{opacity:0}to{opacity:1}}
+
+/* HERO */
+.hero{min-height:100vh;background:linear-gradient(170deg,#e6f6fa 0%,#f4fcfe 42%,#cdeef4 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 1.5rem 3rem;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 42% at 18% 12%,rgba(27,144,182,.16) 0%,transparent 70%),radial-gradient(ellipse 55% 55% at 85% 88%,rgba(127,208,227,.3) 0%,transparent 70%)}
+/* soft floating light orbs behind hero */
+.orb{position:absolute;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.9),rgba(127,208,227,.4) 55%,transparent 72%);filter:blur(1px);animation:orbf ease-in-out infinite;pointer-events:none;z-index:0}
+@keyframes orbf{0%,100%{transform:translateY(0) scale(1);opacity:.55}50%{transform:translateY(-26px) scale(1.08);opacity:.85}}
+.hero>*{position:relative;z-index:1}
+.ft{font-size:3rem;margin-bottom:.6rem;animation:sw 5s ease-in-out infinite;filter:drop-shadow(0 6px 14px rgba(106,169,224,.4))}
+@keyframes sw{0%,100%{transform:rotate(-4deg) scale(1)}50%{transform:rotate(4deg) scale(1.05)}}
+.ib{display:inline-block;border:1px solid rgba(106,169,224,.55);padding:.4rem 1.4rem;border-radius:2rem;font-family:"Cormorant Garamond",serif;font-size:.78rem;letter-spacing:.34em;color:var(--sky);text-transform:uppercase;margin-bottom:1.9rem;background:rgba(255,255,255,.6);box-shadow:0 3px 14px rgba(106,169,224,.12)}
+.pf{position:relative;width:min(292px,78vw);margin:0 auto 2.3rem}
+.pf::before{content:"";position:absolute;inset:-12px;border:1.5px solid rgba(106,169,224,.5);border-radius:50% 50% 50% 50%/62% 62% 38% 38%;animation:halo 6s ease-in-out infinite}
+.pf::after{content:"";position:absolute;inset:-22px;border:1px solid rgba(195,226,246,.6);border-radius:50% 50% 50% 50%/62% 62% 38% 38%;animation:halo 6s ease-in-out infinite reverse}
+@keyframes halo{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.03);opacity:1}}
+.fc{position:absolute;font-size:1.35rem;z-index:2;animation:sw 4s ease-in-out infinite}
+.fc.tl{top:-12px;left:-6px;animation-delay:0s}
+.fc.tr{top:-12px;right:-6px;animation-delay:.5s}
+.fc.bl{bottom:-12px;left:-6px;animation-delay:1s}
+.fc.br{bottom:-12px;right:-6px;animation-delay:1.5s}
+.cp-img{width:100%;display:block;object-fit:cover;object-position:center top;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;box-shadow:0 18px 52px rgba(106,169,224,.36)}
+.ph{width:100%;aspect-ratio:1/1.05;display:flex;align-items:center;justify-content:center;font-size:3.6rem;background:linear-gradient(150deg,#dceffb,#eef7fe);border-radius:50% 50% 50% 50%/62% 62% 38% 38%;box-shadow:0 18px 52px rgba(106,169,224,.32);color:var(--sky)}
+.xs{color:var(--sky);font-size:1.7rem;margin-bottom:.4rem;filter:drop-shadow(0 0 8px rgba(167,211,245,.7))}
+/* shimmering name */
+.nb{
+  font-family:"Great Vibes",cursive;font-size:clamp(3.2rem,11vw,5.8rem);line-height:1.05;
+  background:linear-gradient(100deg,#0f6382 0%,#1b90b6 25%,#7fd0e3 45%,#1b90b6 65%,#0f6382 100%);
+  background-size:250% auto;-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:var(--deep);
+  animation:shine 5s linear infinite;
+}
+@keyframes shine{to{background-position:250% center}}
+.na{font-family:"Cormorant Garamond",serif;font-size:1rem;letter-spacing:.52em;color:var(--sky);text-transform:uppercase;margin:.3rem 0 0}
+.vc{max-width:392px;margin:1.9rem auto 0;padding:1.4rem 1.7rem;background:rgba(255,255,255,.8);border-left:3px solid var(--sky);border-radius:0 1.2rem 1.2rem 0;box-shadow:0 6px 26px rgba(106,169,224,.16);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.04rem;color:var(--text);line-height:1.78}
+.vr{font-style:normal;font-size:.78rem;color:var(--sky);margin-top:.5rem;letter-spacing:.12em}
+.sd{margin-top:2.3rem;cursor:pointer;color:var(--sky);font-size:1.4rem;animation:sb 2s infinite}
+@keyframes sb{0%,100%{transform:translateY(0)}50%{transform:translateY(9px)}}
+
+/* SECTIONS */
+.sec{padding:4.6rem 1.5rem;text-align:center}
+.sl{font-family:"Cormorant Garamond",serif;font-size:.72rem;letter-spacing:.4em;text-transform:uppercase;color:var(--sky);margin-bottom:.8rem}
+.st{font-family:"Great Vibes",cursive;font-size:clamp(2.4rem,7.5vw,3.4rem);color:var(--deep);margin-bottom:2rem}
+
+/* ===== SCRATCH CARD w/ shimmer sweep ===== */
+.sco{position:relative;width:min(342px,90vw);margin:0 auto .8rem;border-radius:1.5rem;overflow:hidden;box-shadow:0 14px 46px rgba(106,169,224,.32);touch-action:manipulation}
+.sci{background:linear-gradient(140deg,#e6f6fa,#f4fcfe,#cdeef4);padding:2.9rem 2rem;text-align:center;position:relative;overflow:hidden}
+/* diagonal light sweep across revealed card */
+.sci::after{content:"";position:absolute;top:-60%;left:-60%;width:60%;height:220%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.85),transparent);
+  transform:rotate(20deg);animation:sweep 4.5s ease-in-out 1s infinite}
+@keyframes sweep{0%{left:-60%}55%,100%{left:160%}}
+.sr{font-size:2.3rem;margin-bottom:.8rem;position:relative}
+.sd2{font-family:"Great Vibes",cursive;font-size:clamp(2.7rem,8.4vw,4.3rem);color:var(--deep);line-height:1.2;position:relative}
+.sdy{font-family:"Cormorant Garamond",serif;font-size:1.32rem;color:var(--sky);font-style:italic;margin-top:.3rem;position:relative}
+.ssb{font-family:"Cormorant Garamond",serif;font-size:.9rem;letter-spacing:.3em;color:var(--soft);text-transform:uppercase;margin-top:.6rem;position:relative}
+#sc{position:absolute;inset:0;width:100%;height:100%;cursor:crosshair;pointer-events:auto;touch-action:manipulation;-webkit-touch-callout:none;border-radius:1.5rem}
+.sh{font-family:"Cormorant Garamond",serif;font-size:.84rem;color:var(--soft);letter-spacing:.18em;margin-top:1rem}
+.cw{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2.2rem}
+.cb{text-align:center;background:linear-gradient(160deg,rgba(255,255,255,.95),rgba(238,247,254,.95));border:1px solid var(--babyblue);border-radius:1.2rem;padding:1rem 1.1rem;min-width:70px;box-shadow:0 6px 20px rgba(106,169,224,.16)}
+.cn{font-family:"Cormorant Garamond",serif;font-size:2.15rem;font-weight:600;color:var(--deep);display:block;line-height:1}
+.cl{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin-top:.25rem;display:block}
+.dp{text-align:center;font-size:1.4rem;letter-spacing:.6rem;margin:.5rem 0;opacity:.85}
+
+/* EVENTS */
+.ew{padding:4.6rem 1.5rem;background:var(--cream);text-align:center}
+.tl{max-width:420px;margin:0 auto;position:relative}
+.tl::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,var(--sky),transparent);transform:translateX(-50%)}
+.ei{display:flex;flex-direction:column;align-items:center;margin-bottom:2.8rem;position:relative}
+.ed{width:14px;height:14px;background:var(--sky);border-radius:50%;border:2.5px solid var(--cream);box-shadow:0 0 0 6px rgba(106,169,224,.2);margin-bottom:.9rem;z-index:1}
+.ec{background:rgba(255,255,255,.96);border:1px solid var(--babyblue);border-radius:1.4rem;padding:1.4rem 1.7rem;text-align:center;width:100%;box-shadow:0 8px 26px rgba(106,169,224,.14)}
+.ee{font-size:2.1rem;margin-bottom:.4rem}
+.en{font-family:"Cormorant Garamond",serif;font-size:1.12rem;font-weight:600;color:var(--deep);margin-bottom:.3rem}
+.edt{font-size:.86rem;color:var(--text);line-height:1.75;opacity:.85}
+
+/* VENUE */
+.vw{background:linear-gradient(155deg,#e6f6fa,#f4fcfe);padding:4.6rem 1.5rem;text-align:center}
+.vcd{max-width:460px;margin:0 auto;background:rgba(255,255,255,.92);border:1px solid var(--babyblue);border-radius:2rem;padding:2.7rem 2rem;box-shadow:0 16px 52px rgba(106,169,224,.2);backdrop-filter:blur(12px)}
+.vi{font-size:3rem;margin-bottom:1rem;filter:drop-shadow(0 6px 14px rgba(106,169,224,.35))}
+.vn{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(1.4rem,4.2vw,1.8rem);letter-spacing:.06em;color:var(--deep);margin-bottom:.4rem}
+.va{font-family:"Cormorant Garamond",serif;font-size:1rem;color:var(--text);opacity:.8;line-height:1.9;margin-bottom:1.6rem}
+.mb{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--sky),var(--deep));color:#fff;text-decoration:none;padding:.8rem 2.1rem;border-radius:2rem;font-family:"Cormorant Garamond",serif;font-size:.94rem;letter-spacing:.1em;box-shadow:0 6px 22px rgba(106,169,224,.42);transition:transform .2s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.mb:active{transform:scale(.97)}
+
+/* PILL */
+.pill{
+  font-family:"Cormorant Garamond",serif;font-size:1.15rem;font-weight:600;letter-spacing:.18em;color:var(--deep);
+  text-transform:uppercase;margin-bottom:1.4rem;padding:.58rem 1.5rem;display:inline-block;
+  border:1.5px solid var(--sky);border-radius:2rem;background:rgba(106,169,224,.1);
+}
+
+/* TITLE */
+.hm-title{
+  font-family:"Cormorant Garamond",serif;font-size:clamp(1.2rem,4vw,1.6rem);
+  letter-spacing:.32em;color:var(--sky);text-transform:uppercase;margin-bottom:1.6rem;
+}
+
+footer{padding:1.8rem;text-align:center;background:linear-gradient(160deg,var(--deep),var(--text));color:rgba(255,255,255,.7);font-size:.73rem;letter-spacing:.16em;font-family:"Cormorant Garamond",serif}
+
+/* FLOATERS */
+#pc2{position:fixed;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:2;overflow:hidden}
+.pt{position:absolute;top:-30px;opacity:0;animation:pd linear infinite;pointer-events:none}
+@keyframes pd{0%{transform:translateY(0) rotate(0deg) translateX(0);opacity:.85}50%{transform:translateY(50vh) rotate(30deg) translateX(20px);opacity:.7}100%{transform:translateY(110vh) rotate(-20deg) translateX(-10px);opacity:0}}
+.blp{position:absolute;bottom:-40px;opacity:0;animation:rise linear infinite;pointer-events:none}
+@keyframes rise{0%{transform:translateY(0) translateX(0);opacity:.8}50%{transform:translateY(-55vh) translateX(18px);opacity:.6}100%{transform:translateY(-115vh) translateX(-12px);opacity:0}}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rv.vis{opacity:1;transform:none}
+@media(max-width:480px){.nb{font-size:3rem}.pf{width:232px}.tl::before{display:none}}
+</style>
+</head>
+<body>
+
+<audio id="bgm" src="music.mp3" loop preload="auto"></audio>
+
+<div id="cs" onclick="open_curtain()" ontouchstart="" ontouchend="open_curtain()">
+  <div class="cp l">
+    <svg viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#2ba3c9"/><stop offset="50%" style="stop-color:#7fd0e3"/><stop offset="100%" style="stop-color:#0f6382"/></linearGradient></defs>
+      <rect width="100" height="100" fill="url(#lg1)"/>
+      <text x="50" y="26" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.4)" font-family="serif">☁</text>
+      <text x="50" y="54" text-anchor="middle" font-size="11" fill="rgba(255,255,255,.35)" font-family="serif">🎈</text>
+      <text x="50" y="80" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.4)" font-family="serif">☁</text>
+    </svg>
+  </div>
+  <div class="cp r">
+    <svg viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="url(#lg1)"/>
+      <text x="50" y="26" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.4)" font-family="serif">☁</text>
+      <text x="50" y="54" text-anchor="middle" font-size="11" fill="rgba(255,255,255,.35)" font-family="serif">🧸</text>
+      <text x="50" y="80" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.4)" font-family="serif">☁</text>
+    </svg>
+  </div>
+  <div id="cstars"></div>
+  <div class="cc">
+    <div class="cc-cross">🕊️</div>
+    <div class="cc-names">Niaal</div>
+    <div class="cc-sub">Holy Baptism</div>
+    <div class="cc-tag">✦ Tap to Open ✦</div>
+  </div>
+  <div class="cc-hint">Tap anywhere to open the invitation</div>
+</div>
+
+<div id="mp">
+  <section class="hero">
+    <div class="orb" style="width:120px;height:120px;top:14%;left:8%;animation-duration:9s"></div>
+    <div class="orb" style="width:80px;height:80px;top:60%;left:78%;animation-duration:7s;animation-delay:1s"></div>
+    <div class="orb" style="width:60px;height:60px;top:78%;left:14%;animation-duration:8s;animation-delay:2s"></div>
+    <div class="ft">🕊️</div>
+    <div class="ib">You Are Invited</div>
+    <div class="pf">
+      <div class="fc tl">🎈</div><div class="fc tr">⭐</div><div class="fc bl">🧸</div><div class="fc br">☁️</div>
+      <img class="cp-img" src="pic.JPG" alt="Niaal Jacob Mukul">
+    </div>
+    <div class="xs">✝</div>
+    <div class="nb">Niaal Jacob Mukul</div>
+    <div class="na">Baptism</div>
+    <div class="vc rv">
+      "Let the little children come to me, and do not hinder them,
+       for the kingdom of heaven belongs to such as these."
+      <div class="vr">— Matthew 19 : 14</div>
+    </div>
+    <div class="sd" onclick="document.getElementById('dsec').scrollIntoView({behavior:'smooth'})">↓</div>
+  </section>
+
+  <section class="sec" id="dsec" style="background:linear-gradient(155deg,#f4fcfe,#e6f6fa)">
+    <div class="sl">✦ Mark the Date ✦</div>
+    <div class="st">Scratch to Reveal</div>
+    <div class="sco" id="sco">
+      <div class="sci">
+        <div class="sr">🎈</div>
+        <div class="sd2">Aug 8, 2026</div>
+        <div class="sdy">Saturday · 5:00 PM</div>
+        <div class="ssb">Our Little Blessing</div>
+      </div>
+      <canvas id="sc"></canvas>
+    </div>
+    <div class="sh" id="sh">🎉 Scratch the card to reveal</div>
+    <div style="margin-top:2.8rem">
+      <div class="sl">Counting down to the big day</div>
+      <div class="cw" id="cd"></div>
+    </div>
+  </section>
+
+  <div class="dp">🎈 ☁️ 🧸 ☁️ 🎈</div>
+
+  <section class="ew" id="ewsec">
+    <div class="hm-title">The Baptism</div>
+    <div class="tl">
+      <div class="ei"><div class="ed"></div>
+        <div class="ec rv"><div class="ee">⛪</div>
+          <div class="en">Sacrament of Baptism</div>
+          <div class="edt">Saturday, 8 August 2026<br>5:00 PM · St. Sebastian's Church<br>Kottuvally</div></div></div>
+    </div>
+  </section>
+
+  <div class="dp">⭐ 🎈 ⭐ 🎈 ⭐</div>
+
+  <section class="vw" id="vsec">
+    <div class="sl">✦ Join Us For Celebration ✦</div>
+    <div class="pill">Reception To Follow</div>
+    <div class="vcd rv">
+      <div class="vi">🎉</div>
+      <div class="vn">EDEN by Kavitha</div>
+      <div class="va">Reception<br>Saturday, August 8, 2026</div>
+      <a href="https://www.google.com/maps/place/EDEN+by+Kavitha/@10.1367468,76.2163958,17z/data=!3m1!4b1!4m6!3m5!1s0x3b0811a6137d598f:0xd94b57b3e76dc9eb!8m2!3d10.1367468!4d76.2189707!16s%2Fg%2F11lz66jv2f?entry=ttu&g_ep=EgoyMDI2MDcxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="mb">📍 Get Directions</a>
+    </div>
+  </section>
+
+  <footer>
+    <div style="color:var(--babyblue);font-size:1.1rem;margin-bottom:.4rem">🕊️ 🎈 🕊️</div>
+    Welcomed with love into God's family<br>Niaal Jacob Mukul
+  </footer>
+</div>
+
+<div id="pc2"></div>
+
+<script>
+/* build twinkle stars on curtain */
+(function(){
+  var box=document.getElementById('cstars');
+  for(var i=0;i<40;i++){
+    var s=document.createElement('div');s.className='tw';
+    var sz=(1+Math.random()*2.2);
+    s.style.width=sz+'px';s.style.height=sz+'px';
+    s.style.left=(Math.random()*100)+'%';s.style.top=(Math.random()*100)+'%';
+    s.style.animationDuration=(1.5+Math.random()*2.5)+'s';
+    s.style.animationDelay=(Math.random()*3)+'s';
+    box.appendChild(s);
+  }
+})();
+
+/* BACKGROUND MUSIC */
+var _bgmStarted = false;
+function play_music(){
+  var a = document.getElementById('bgm');
+  if(!a) return;
+  a.volume = 0.6;
+  var p = a.play();
+  if(p !== undefined){ p.then(function(){_bgmStarted=true;}).catch(function(){}); }
+}
+document.addEventListener('visibilitychange',function(){
+  var a=document.getElementById('bgm'); if(!a) return;
+  if(document.hidden){ a.pause(); }
+  else if(_bgmStarted){ a.play().catch(function(){}); }
+});
+
+/* CURTAIN */
+var opened = false;
+function open_curtain() {
+  if (opened) return;
+  opened = true;
+  document.getElementById('cs').classList.add('open');
+  play_music();
+  setTimeout(function() {
+    document.getElementById('cs').style.display = 'none';
+    document.getElementById('mp').classList.add('show');
+    document.getElementById('scrollBtn').classList.add('show');
+    spawn_floaters();
+    countdown();
+    scratch_init();
+    window.scrollTo(0, 0);
+    setup_scroll_btn();
+    setup_rv_observer();
+  }, 1700);
+}
+
+/* FLOATERS */
+function spawn_floaters() {
+  var pc = document.getElementById('pc2');
+  var drift = ['☁️','⭐','✨','🌟'];
+  for (var i = 0; i < 14; i++) {
+    var p = document.createElement('div');
+    p.className = 'pt';
+    p.textContent = drift[Math.floor(Math.random() * drift.length)];
+    p.style.left = (Math.random() * 100) + 'vw';
+    p.style.fontSize = (0.7 + Math.random() * 0.9) + 'rem';
+    p.style.animationDuration = (10 + Math.random() * 12) + 's';
+    p.style.animationDelay = (Math.random() * 10) + 's';
+    pc.appendChild(p);
+  }
+  var balloons = ['🎈','🎈','🎈','🧸'];
+  for (var j = 0; j < 10; j++) {
+    var b = document.createElement('div');
+    b.className = 'blp';
+    b.textContent = balloons[Math.floor(Math.random() * balloons.length)];
+    b.style.left = (Math.random() * 100) + 'vw';
+    b.style.fontSize = (1 + Math.random() * 1.1) + 'rem';
+    b.style.animationDuration = (12 + Math.random() * 12) + 's';
+    b.style.animationDelay = (Math.random() * 12) + 's';
+    pc.appendChild(b);
+  }
+}
+
+/* COUNTDOWN — Aug 8 2026 5pm */
+function countdown() {
+  function tick() {
+    var diff = new Date('2026-08-08T17:00:00') - new Date();
+    if (diff <= 0) {
+      document.getElementById('cd').innerHTML = "<div style='font-family:Great Vibes,cursive;font-size:2rem;color:var(--deep)'>The Day is Here! 🎉</div>";
+      return;
+    }
+    var d=Math.floor(diff/86400000), h=Math.floor((diff%86400000)/3600000),
+        m=Math.floor((diff%3600000)/60000), s=Math.floor((diff%60000)/1000);
+    document.getElementById('cd').innerHTML =
+      [['Days',d],['Hours',h],['Minutes',m],['Seconds',s]]
+      .map(function(x){ return "<div class='cb'><span class='cn'>"+String(x[1]).padStart(2,'0')+"</span><span class='cl'>"+x[0]+"</span></div>"; })
+      .join('');
+  }
+  tick(); setInterval(tick, 1000);
+}
+
+/* SCRATCH */
+function scratch_init() {
+  var outer=document.getElementById('sco'), canvas=document.getElementById('sc');
+  var ctx=canvas.getContext('2d'), done=false, drawing=false;
+  function resize(){ canvas.width=outer.offsetWidth; canvas.height=outer.offsetHeight; paint(); }
+  function paint(){
+    var g=ctx.createLinearGradient(0,0,canvas.width,canvas.height);
+    g.addColorStop(0,'#7fd0e3'); g.addColorStop(.5,'#a9dbe8'); g.addColorStop(1,'#2ba3c9');
+    ctx.fillStyle=g; ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle='rgba(12,74,96,.13)'; ctx.font='18px serif';
+    for(var x=0;x<canvas.width;x+=36) for(var y=20;y<canvas.height;y+=36) ctx.fillText('🎈',x,y);
+    ctx.textAlign='center';
+    ctx.fillStyle='rgba(12,74,96,.72)'; ctx.font='bold 15px serif';
+    ctx.fillText('✦  Scratch Here  ✦',canvas.width/2,canvas.height/2-8);
+    ctx.font='11px sans-serif'; ctx.fillStyle='rgba(12,74,96,.6)';
+    ctx.fillText('Scratch to reveal the date',canvas.width/2,canvas.height/2+16);
+  }
+  function get_pos(e){
+    var r=canvas.getBoundingClientRect(), sx=canvas.width/r.width, sy=canvas.height/r.height;
+    if(e.touches&&e.touches.length) return {x:(e.touches[0].clientX-r.left)*sx,y:(e.touches[0].clientY-r.top)*sy};
+    return {x:(e.clientX-r.left)*sx,y:(e.clientY-r.top)*sy};
+  }
+  function do_scratch(e){
+    e.preventDefault(); e.stopPropagation();
+    if(done) return;
+    var p=get_pos(e);
+    ctx.globalCompositeOperation='destination-out';
+    ctx.beginPath(); ctx.arc(p.x,p.y,34,0,Math.PI*2); ctx.fill();
+    check_done();
+  }
+  function check_done(){
+    if(done) return;
+    var px=ctx.getImageData(0,0,canvas.width,canvas.height).data, c=0;
+    for(var i=3;i<px.length;i+=4) if(px[i]<128) c++;
+    if(c/(canvas.width*canvas.height)>0.46){
+      done=true; canvas.style.display='none'; celebrate();
+      document.getElementById('sh').textContent='🎉 Mark the Date — Aug 8, 2026!';
+      setTimeout(function(){ document.getElementById('ewsec').scrollIntoView({behavior:'smooth'}); },2800);
+    }
+  }
+  canvas.addEventListener('mousedown',function(e){drawing=true;do_scratch(e);});
+  canvas.addEventListener('mousemove',function(e){if(drawing)do_scratch(e);});
+  canvas.addEventListener('mouseup',function(){drawing=false;});
+  canvas.addEventListener('mouseleave',function(){drawing=false;});
+  canvas.addEventListener('touchstart',function(e){drawing=true;do_scratch(e);},{passive:false});
+  canvas.addEventListener('touchmove',function(e){if(drawing)do_scratch(e);},{passive:false});
+  canvas.addEventListener('touchend',function(e){drawing=false;e.preventDefault();},{passive:false});
+  resize(); window.addEventListener('resize',resize);
+}
+
+/* CELEBRATE */
+function celebrate(){
+  var c=document.getElementById('pc2');
+  var items=['🎉','🎊','🎈','✨','🕊️','⭐','🧸','🎀','💙','☁️','🌟','🎁'];
+  for(var i=0;i<90;i++){
+    var el=document.createElement('div');
+    el.style.cssText='position:fixed;left:'+(Math.random()*100)+'vw;top:-24px;font-size:'+(0.9+Math.random()*1.6)+'rem;pointer-events:none;z-index:9999;animation:pd '+(1.8+Math.random()*2.5)+'s ease-in forwards;animation-delay:'+(Math.random()*1.8)+'s;';
+    el.textContent=items[Math.floor(Math.random()*items.length)];
+    c.appendChild(el);
+    setTimeout((function(x){return function(){x.remove();};}(el)),6000);
+  }
+}
+
+/* SCROLL BUTTON */
+function setup_scroll_btn() {
+  var btn = document.getElementById('scrollBtn');
+  var goingDown = true;
+  function do_scroll() {
+    if (goingDown) window.scrollBy({ top: window.innerHeight * 0.85, behavior: 'smooth' });
+    else window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  btn.onclick = do_scroll;
+  window.addEventListener('scroll', function() {
+    var maxScroll = document.body.scrollHeight - window.innerHeight;
+    if ((window.scrollY || window.pageYOffset) > maxScroll - 200) { goingDown = false; btn.textContent = '↑'; }
+    else { goingDown = true; btn.textContent = '↓'; }
+  }, { passive: true });
+}
+
+function setup_rv_observer(){
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('vis');});
+  },{threshold:0.14});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+}
+</script>
+<button id="scrollBtn">↓</button>
+</body>
+</html>
